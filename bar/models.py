@@ -19,6 +19,9 @@ class Product(models.Model):
     contains_nuts = models.BooleanField(verbose_name='Nuts ?', default=False)
     contains_milk = models.BooleanField(verbose_name='Milk ?', default=False)
 
+    def __str__(self):
+        return self.name
+
 
 class Sale(models.Model):
     product_sold = models.ForeignKey(Product)
