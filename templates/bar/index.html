@@ -1,9 +1,64 @@
-{% if products %}
-    <ul>
-    {% for product in products %}
-        <li><a href="/product/{{ product.id }}/">{{ product.name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No products are available.</p>
-{% endif %}
+<html>
+    <head>
+        <title>OxBar</title>
+        <script src="/static/oxbar.js"></script>
+        <link rel="stylesheet" href="/static/oxbar.css" />
+    </head>
+    <body>
+        <center>
+            <h1>OxBar</h1>
+        </center>
+
+        <div id="products">
+            {% if products %}
+            {% for product in products %}
+            <div class="product" onclick="window.location = '/buy/{{ product.id }}/';">
+
+                {% if product.product_type == 'D' %}
+                    <img src="/static/img/soda.png" class="producticon" />
+                {% endif %}
+
+                {% if product.product_type == 'S' %}
+                    <img src="/static/img/candy.png" class="producticon" />
+                {% endif %}
+
+                {% if product.product_type == 'A' %}
+                    <img src="/static/img/beer.png" class="producticon" />
+                {% endif %}
+
+
+
+                <h3><span>{{ product.name }}</span></h3>
+                <p>{{ product.description }}</p>
+            {% if product.is_vegan %}
+                <img src="/static/img/vegan.png" class="icon" />
+            {% endif %}
+            {% if product.is_vegetarian %}
+                <img src="/static/img/vegetarian.svg" class="icon" />
+            {% endif %}
+            {% if product.contains_nuts %}
+                <img src="/static/img/peanuts.png" class="icon" />
+            {% endif %}
+            {% if product.contains_milk %}
+                <img src="/static/img/milk.png" class="icon" />
+            {% endif %}
+
+                <span class="pricelabel">
+                    <h3>
+                        &pound; {{ product.product_price }}
+                    </h3>
+                </span>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No products are available.</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
+
+<!--
+
+
+
+-->
