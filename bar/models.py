@@ -10,10 +10,14 @@ class Product(models.Model):
         ('A', 'Alcoholic Beverage')
     )
 
-    name = models.TextField()
+    name = models.CharField(max_length=50)
     description = models.TextField()
     product_type = models.CharField(max_length=1, choices=PRODUCT_TYPES)
     product_price = models.DecimalField(decimal_places=2, max_digits=6)
+    is_vegan = models.BooleanField(verbose_name='Vegan ?', default=False)
+    is_vegetarian = models.BooleanField(verbose_name='Vegetarian ?', default=False)
+    contains_nuts = models.BooleanField(verbose_name='Nuts ?', default=False)
+    contains_milk = models.BooleanField(verbose_name='Milk ?', default=False)
 
 
 class Sale(models.Model):
