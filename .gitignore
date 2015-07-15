@@ -2,3 +2,5 @@
 *.pyc
 db.*
 .idea
+oxbar-mobile/platforms
+oxbar-mobile/plugins
