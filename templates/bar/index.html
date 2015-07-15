@@ -36,7 +36,8 @@
 
 
                 <h3><span>{{ product.name }}</span></h3>
-                <p>{{ product.description }}</p>
+
+                <p class="description">{{ product.description }}</p>
             {% if product.is_vegan %}
                 <img src="/static/img/vegan.png" class="icon" />
             {% endif %}
