@@ -3,6 +3,7 @@ from django.contrib.auth import models as user_models
 
 # Create your models here.
 
+
 class Product(models.Model):
     PRODUCT_TYPES = (
         ('S', 'Snack'),
