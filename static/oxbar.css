@@ -8,7 +8,7 @@ body {
     bottom: 15px;
     left: 15px;
     right: 15px;
-    top: 45px;
+    top: 65px;
     position: absolute;
 
 }
@@ -39,4 +39,36 @@ body {
 .pricelabel {
     float:right;
     bottom: 5px;
+}
+
+#productview {
+    width: 500px;
+    border: 2px solid black;
+    margin: auto;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.buy_icon {
+    padding-top: 25px;
+}
+
+.buy_allergen {
+    height: 48px;
+    width: 48px;
+}
+
+.green {
+    border-color: green;
+    background-color: lime;
+    color: darkgreen;
+}
+
+.button {
+    height: 30px;
+    width: 150px;
+    border: 2px solid black;
+    margin: 5px 5px 5px 5px;
+    margin-bottom: 25px;
+    padding-top: 12px;
 }
