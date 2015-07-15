@@ -25,7 +25,7 @@ SECRET_KEY = 'p0r3azqe%)0t&mvi@%g28lg)5vd&&a9(7$pk5*zi+pey9)cr7v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['oxbar.cloudapp.net', ]
 
 
 # Application definition
