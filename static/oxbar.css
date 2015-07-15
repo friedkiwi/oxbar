@@ -14,8 +14,8 @@ body {
 }
 
 .product {
-    height: 120px;
-    width: 300px;
+    height: 150px;
+    width: 400px;
     border: 2px solid black;
     float: left;
     margin: 7px 7px 7px 7px;
@@ -31,13 +31,12 @@ body {
 .producticon {
     margin-top: 10px;
     margin-left: 5px;
-    height: 64px;
-    width: 64px;
+    height: 48px;
+    width: 48px;
     float: left;
 }
 
 .pricelabel {
-    float: right;
-    margin-top: -20px;
-    margin-right: 5px;
+    float:right;
+    bottom: 5px;
 }

@@ -13,6 +13,11 @@
             {% if products %}
             {% for product in products %}
             <div class="product" onclick="window.location = '/buy/{{ product.id }}/';">
+                <span class="pricelabel">
+                    <h3>
+                        &pound; {{ product.product_price }}
+                    </h3>
+                </span>
 
                 {% if product.product_type == 'D' %}
                     <img src="/static/img/soda.png" class="producticon" />
@@ -43,11 +48,7 @@
                 <img src="/static/img/milk.png" class="icon" />
             {% endif %}
 
-                <span class="pricelabel">
-                    <h3>
-                        &pound; {{ product.product_price }}
-                    </h3>
-                </span>
+
             </div>
             {% endfor %}
             {% else %}
