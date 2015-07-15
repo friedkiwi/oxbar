@@ -2,9 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <script src="/static/oxbar.js"></script>
+    <link rel="stylesheet" href="/static/oxbar.css" />
+    <title>OxBar</title>
 </head>
 <body>
+    <center>
+        <h1>OxBar</h1>
+    </center>
+    <div id="productview">
+        <center>
+            {% if product.product_type == 'D' %}
+                    <img src="/static/img/soda.png" class="buy_icon" />
+                {% endif %}
 
+                {% if product.product_type == 'S' %}
+                    <img src="/static/img/candy.png" class="buy_icon" />
+                {% endif %}
+
+                {% if product.product_type == 'A' %}
+                    <img src="/static/img/beer.png" class="buy_icon" />
+                {% endif %}
+            <h2>
+                {{ product.name }}
+            </h2>
+
+            <p>
+                Contains: <br />
+                 {% if product.is_vegan %}
+                    <img src="/static/img/vegan.png" class="buy_allergen" />
+                {% endif %}
+                {% if product.is_vegetarian %}
+                    <img src="/static/img/vegetarian.svg" class="buy_allergen" />
+                {% endif %}
+                {% if product.contains_nuts %}
+                    <img src="/static/img/peanuts.png" class="buy_allergen" />
+                {% endif %}
+                {% if product.contains_milk %}
+                    <img src="/static/img/milk.png" class="buy_allergen" />
+                {% endif %}
+            </p>
+
+            <h2>Please pay &pound; 1.00 in the money box.</h2>
+            <div class="button green" onclick="window.location = '/';">
+                Okay
+            </div>
+        </center>
+    </div>
 </body>
 </html>
