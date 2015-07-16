@@ -19,6 +19,7 @@ class Product(models.Model):
     is_vegetarian = models.BooleanField(verbose_name='Vegetarian ?', default=False)
     contains_nuts = models.BooleanField(verbose_name='Nuts ?', default=False)
     contains_milk = models.BooleanField(verbose_name='Milk ?', default=False)
+    sold_tracker = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
